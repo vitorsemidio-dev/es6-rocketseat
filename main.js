@@ -1,8 +1,3 @@
-const array = () => [1,2,3];
-const string = () => 'string';
-const objeto = () => ({tipoRetorno: 'objeto', tipoFuncao: 'Arraw Funciton'});
+const soma = (a = 0, b = 0) =>  a + b;
 
-
-console.log(array());
-console.log(string());
-console.log(objeto());
+console.log(soma(1, 5));

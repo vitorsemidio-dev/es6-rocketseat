@@ -1,20 +1,9 @@
 "use strict";
 
-var array = function array() {
-  return [1, 2, 3];
+var soma = function soma() {
+  var a = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : 0;
+  var b = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : 0;
+  return a + b;
 };
 
-var string = function string() {
-  return 'string';
-};
-
-var objeto = function objeto() {
-  return {
-    tipoRetorno: 'objeto',
-    tipoFuncao: 'Arraw Funciton'
-  };
-};
-
-console.log(array());
-console.log(string());
-console.log(objeto());
+console.log(soma(1, 5));
