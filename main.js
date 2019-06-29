@@ -1,16 +1,14 @@
-const usuario = { nome: 'Emidio' };
-const arr = [1, 2, 3];
+const arr = [1, 5, 2, 3, 8, 10, 12, 13, 18, 21]
 
-usuario.nome = 'abc';
-arr[1] = 10;
-console.log(usuario, arr);
 
-function teste(x) {
-    let y = 2;
+const arrMap = arr.map((value) => value * 2);
+const arrMapWithIndex = arr.map((value, index) => value * index);
+const sum = arr.reduce((total, current) => total + current);
+const filtro = arr.filter((value) => value % 2 === 0);
+const find = arr.find((search) => search === 11);
 
-    if (x > 5) {
-        console.log(x, y);
-    }
-}
-
-teste(10);
+console.log(arrMap);
+console.log(arrMapWithIndex);
+console.log(sum);
+console.log(filtro);
+console.log(find);
