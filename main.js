@@ -1,28 +1,56 @@
 const usuario = {
     nome: 'Emidio',
     idade: 22,
-    endereco: {
-        cidade: 'Rio de Janeiro',
-        estado: 'RJ'
-    }
+    universidade: 'UERJ'
 }
 
-// #1
-const nomeUsuario = usuario.nome;
-const idadeUsuario = usuario.idade;
-const cidadeUsuario = usuario.endereco.cidade;
-console.log(nomeUsuario, idadeUsuario, cidadeUsuario);
+const { nome, ...restoObj } = usuario;
 
-
-// #2
-const { nome } = usuario;
-const { idade, endereco: { cidade } } = usuario;
 console.log(nome);
-console.log(idade, cidade);
+console.log(restoObj);
+
+
+const arr = [1,2,3,4,5];
+const [ a, b, ...restoArr ] = arr;
+console.log(a);
+console.log(b);
+console.log(restoArr); 
+
+
+function soma (...params) {
+    return params.reduce((total, current) => total + current);
+}
+
+console.log(soma(1));
+console.log(soma(1, 5, 10, 2));
+console.log(soma(1, 1, 1, 8, 9, 6, 14));
 
 
 
-mostrarNome = (usuario) => usuario.nome;
-mostrarNome2 = ({nome}) => nome;
-console.log(mostrarNome(usuario));
-console.log(mostrarNome2(usuario));
+
+const arr1 = [1,2,3]
+const arr2 = [4,5,6]
+const arr3 = [...arr1, ...arr2];
+
+console.log(arr1)
+console.log(arr2)
+console.log(arr3)
+
+const idade = 22;
+const curso = 'Ciencia da Computacao';
+
+const aluno1 = {
+    nome: 'Emidio',
+    idade,
+    universidade: 'UERJ',
+    curso
+}
+
+const aluno2 = {...aluno1, nome: 'Levi', universidade: 'UFMG'}
+
+function apresentacaoAluno({nome, idade, universidade, curso}) {
+    return `Olah! Meu nome eh ${nome} e tenho ${idade} anos. Estou cursando ${curso} na ${universidade}`
+}
+
+console.log(apresentacaoAluno(aluno1));
+console.log(apresentacaoAluno(aluno2));
