@@ -90,11 +90,11 @@
 /*!********************!*\
   !*** ./funcoes.js ***!
   \********************/
-/*! exports provided: soma */
+/*! exports provided: max, min, default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"soma\", function() { return soma; });\nfunction soma(a, b) {\n  return a + b;\n}\n\n//# sourceURL=webpack:///./funcoes.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"max\", function() { return max; });\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"min\", function() { return min; });\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"default\", function() { return abs; });\nfunction max(a, b) {\n  return a > b ? a : b;\n}\nfunction min(a, b) {\n  return a < b ? a : b;\n}\nfunction abs(a) {\n  return a > 0 ? a : -a;\n}\n\n//# sourceURL=webpack:///./funcoes.js?");
 
 /***/ }),
 
@@ -106,7 +106,43 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) *
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _funcoes__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./funcoes */ \"./funcoes.js\");\n\nconsole.log(Object(_funcoes__WEBPACK_IMPORTED_MODULE_0__[\"soma\"])(1, 2));\n\n//# sourceURL=webpack:///./main.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _funcoes__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./funcoes */ \"./funcoes.js\");\n/* harmony import */ var _soma__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./soma */ \"./soma.js\");\n/* harmony import */ var _mult__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./mult */ \"./mult.js\");\n/* harmony import */ var _sub__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./sub */ \"./sub.js\");\n\n\n\n\nconsole.log(Object(_soma__WEBPACK_IMPORTED_MODULE_1__[\"default\"])(1, 2));\nconsole.log(Object(_mult__WEBPACK_IMPORTED_MODULE_2__[\"default\"])(10, 8));\nconsole.log(Object(_funcoes__WEBPACK_IMPORTED_MODULE_0__[\"max\"])(10, 8));\nconsole.log(Object(_funcoes__WEBPACK_IMPORTED_MODULE_0__[\"min\"])(10, 8));\nconsole.log(Object(_funcoes__WEBPACK_IMPORTED_MODULE_0__[\"max\"])(Object(_funcoes__WEBPACK_IMPORTED_MODULE_0__[\"default\"])(10), Object(_funcoes__WEBPACK_IMPORTED_MODULE_0__[\"default\"])(-80)));\nconsole.log(_sub__WEBPACK_IMPORTED_MODULE_3__[\"aSUBb\"](10, 20));\nconsole.log(_sub__WEBPACK_IMPORTED_MODULE_3__[\"bSUBa\"](10, 20));\n\n//# sourceURL=webpack:///./main.js?");
+
+/***/ }),
+
+/***/ "./mult.js":
+/*!*****************!*\
+  !*** ./mult.js ***!
+  \*****************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"default\", function() { return mult; });\nfunction mult(a, b) {\n  return a * b;\n}\n\n//# sourceURL=webpack:///./mult.js?");
+
+/***/ }),
+
+/***/ "./soma.js":
+/*!*****************!*\
+  !*** ./soma.js ***!
+  \*****************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"default\", function() { return soma; });\nfunction soma(a, b) {\n  return a + b;\n}\n\n//# sourceURL=webpack:///./soma.js?");
+
+/***/ }),
+
+/***/ "./sub.js":
+/*!****************!*\
+  !*** ./sub.js ***!
+  \****************/
+/*! exports provided: aSUBb, bSUBa */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"aSUBb\", function() { return aSUBb; });\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"bSUBa\", function() { return bSUBa; });\nfunction aSUBb(a, b) {\n  return a - b;\n}\nfunction bSUBa(a, b) {\n  return b - a;\n}\n\n//# sourceURL=webpack:///./sub.js?");
 
 /***/ })
 
