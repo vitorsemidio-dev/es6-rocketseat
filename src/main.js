@@ -1,19 +1,17 @@
-import { exemplo1Then, exemplo2Then, exemplo3Then } from './exemplo';
-import { exemplo1AsyncAwait, exemplo2AsyncAwait, exemplo3AsyncAwait } from './exemplo';
-import { exemplo1Funcao, exemplo2Funcao, exemplo3Funcao } from './exemplo';
+import axios from 'axios';
 
-const minhaPromise = () => new Promise((resolve, reject) => {
-    setTimeout(() => { resolve('Ok') }, 2000);
-});
+class Api {
+    static async getUserInfo(username) {
+        try {
+            const response = await axios.get(`https://api.github.com/users/${username}`);
+            console.log(response);
+        } catch (err) {
+            console.warn(`Usuario ${username} nao encontrado`);
+        }
 
-// minhaPromise()
-//     .then( response => {
-//         console.log(response);
-//     })
-//     .catch(err => {
-//         console.log(err);
-//     })
+    }
+}
 
-// exemplo1Then();
-exemplo1AsyncAwait();
-// exemplo3Funcao();
+
+Api.getUserInfo('diego3g');
+Api.getUserInfo('vitorsemidio');
