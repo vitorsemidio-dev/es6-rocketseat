@@ -39,10 +39,10 @@ class App {
             titleEl.appendChild(document.createTextNode(repo.name));
 
             let descriptionEl = document.createElement('p');
-            descriptionEl.appendChild(document.createElement(repo.description));
+            descriptionEl.appendChild(document.createTextNode(repo.description));
 
             let linkEl = document.createElement('a');
-            linkEl.appendChild(document.createTextNode(repo.html_url));
+            linkEl.appendChild(document.createTextNode('Acessar'));
             linkEl.setAttribute('href', repo.html_url);
             linkEl.setAttribute('target', '_blank');
 
